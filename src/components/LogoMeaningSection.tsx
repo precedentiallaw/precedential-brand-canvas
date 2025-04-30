@@ -1,7 +1,20 @@
 
 import React from 'react';
+import ImageModal from './ImageModal';
 
 export default function LogoMeaningSection() {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState('');
+  
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const meanings = [
     {
       title: "Pillar",
@@ -42,14 +55,23 @@ export default function LogoMeaningSection() {
           ))}
         </div>
         
-        <div className="mt-16 reveal-on-scroll mockup-shadow">
+        <div 
+          className="mt-16 reveal-on-scroll cursor-pointer"
+          onClick={() => openModal("/lovable-uploads/2c90e935-8d0d-4b3c-9d41-b8404a5002d2.png")}
+        >
           <img 
-            src="/lovable-uploads/6d1491b9-a3a0-4f55-958d-4e61289970c3.png" 
+            src="/lovable-uploads/2c90e935-8d0d-4b3c-9d41-b8404a5002d2.png" 
             alt="Precedential Logo Mockup 2" 
             className="w-full h-auto rounded-md"
           />
         </div>
       </div>
+
+      <ImageModal 
+        isOpen={modalOpen}
+        imageUrl={selectedImage}
+        onClose={closeModal}
+      />
     </section>
   );
 }

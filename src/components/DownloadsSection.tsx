@@ -1,7 +1,22 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, ExternalLink } from 'lucide-react';
+import ImageModal from './ImageModal';
+
 export default function DownloadsSection() {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState('');
+  
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const downloads = [{
     title: "Logo Pack",
     icon: "📁",
@@ -19,6 +34,7 @@ export default function DownloadsSection() {
     icon: "📘",
     description: "Complete brand guidelines in one document"
   }];
+  
   return <section id="downloads" className="py-20 px-4 bg-precedential-black text-precedential-white">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-precedential-gold reveal-on-scroll">Your Brand Toolkit</h2>
@@ -46,9 +62,29 @@ export default function DownloadsSection() {
           </Button>
         </div>
         
-        <div className="mt-16 reveal-on-scroll mockup-shadow">
-          <img alt="Precedential Final Mockup" className="w-full h-auto rounded-md" src="/lovable-uploads/d7377704-4246-4d41-8844-2cf395c4d66e.png" />
+        <div className="mt-10 mb-8 reveal-on-scroll text-center">
+          <a 
+            href="https://www.precedentiallaw.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-precedential-gold hover:text-precedential-gold/80 transition-colors"
+          >
+            www.precedentiallaw.com <ExternalLink className="h-4 w-4" />
+          </a>
+        </div>
+        
+        <div 
+          className="mt-16 reveal-on-scroll cursor-pointer"
+          onClick={() => openModal("/lovable-uploads/d03ac815-992b-49e3-8ec9-8483156f4b96.png")}
+        >
+          <img alt="Precedential Final Mockup" className="w-full h-auto rounded-md" src="/lovable-uploads/d03ac815-992b-49e3-8ec9-8483156f4b96.png" />
         </div>
       </div>
+
+      <ImageModal 
+        isOpen={modalOpen}
+        imageUrl={selectedImage}
+        onClose={closeModal}
+      />
     </section>;
 }

@@ -1,26 +1,42 @@
+
 import React from 'react';
+import ImageModal from './ImageModal';
+
 export default function LogoVariationsSection() {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [selectedImage, setSelectedImage] = React.useState('');
+  
+  const openModal = (image: string) => {
+    setSelectedImage(image);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+
   const variations = [{
-    name: "Horizontal Logo",
-    image: "/lovable-uploads/9954224c-5a1a-40d0-abaf-b9fa4b664494.png",
+    name: "Horizontal Logo Gold/White",
+    image: "/lovable-uploads/5f9cd191-09d5-42d4-aef7-336d4ff2a778.png",
     bgColor: "bg-precedential-black"
   }, {
-    name: "Vertical Logo",
-    image: "/lovable-uploads/e44c0ea9-f5e0-4e9d-b977-a54e93e9cb71.png",
+    name: "Horizontal Logo Navy",
+    image: "/lovable-uploads/294465a8-963e-4d57-b49c-7a8f429a0815.png",
     bgColor: "bg-precedential-black"
   }, {
-    name: "Icon Only",
-    image: "/lovable-uploads/c50bf003-bf6a-4e4d-93cb-112f7b3c4657.png",
+    name: "Icon Only Gold",
+    image: "/lovable-uploads/a0450bb4-be17-4941-bb83-0da265d0c596.png",
     bgColor: "bg-precedential-black"
   }, {
-    name: "Icon Greyscale",
-    image: "/lovable-uploads/21ade783-4ee2-4d3d-9519-c5af480da598.png",
+    name: "Icon Silver",
+    image: "/lovable-uploads/c7d3a74a-bba6-4d12-9b4b-1df29fa8693e.png",
     bgColor: "bg-white"
   }, {
-    name: "Icon Monochrome",
-    image: "/lovable-uploads/80e75a86-9b0e-4c7a-9673-689156a412b1.png",
-    bgColor: "bg-white"
+    name: "Icon White",
+    image: "/lovable-uploads/16bd7d8c-dcc2-4ba5-a5c0-ebb8c79bb763.png",
+    bgColor: "bg-precedential-black"
   }];
+  
   const exclusions = [{
     rule: "Don't stretch",
     example: "Distorting proportions compromises brand integrity"
@@ -40,6 +56,7 @@ export default function LogoVariationsSection() {
     rule: "Don't add shadows or effects",
     example: "Keep the logo clean and authentic"
   }];
+  
   return <section id="variations" className="py-20 px-4 bg-precedential-black text-precedential-white">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-precedential-gold reveal-on-scroll">Using It Right</h2>
@@ -47,9 +64,14 @@ export default function LogoVariationsSection() {
         <div className="w-20 h-1 bg-precedential-gold mb-10 reveal-on-scroll"></div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-          {variations.map((variant, index) => <div key={index} className={`${variant.bgColor} p-6 rounded-md flex flex-col items-center justify-center reveal-on-scroll mockup-shadow`} style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
+          {variations.map((variant, index) => <div 
+            key={index} 
+            className={`${variant.bgColor} p-6 rounded-md flex flex-col items-center justify-center reveal-on-scroll cursor-pointer`} 
+            style={{
+              animationDelay: `${index * 0.1}s`
+            }}
+            onClick={() => openModal(variant.image)}
+          >
               <div className="h-36 flex items-center justify-center">
                 <img src={variant.image} alt={`Precedential ${variant.name}`} className="max-h-full max-w-full" />
               </div>
@@ -68,9 +90,18 @@ export default function LogoVariationsSection() {
             </div>)}
         </div>
         
-        <div className="mt-16 reveal-on-scroll mockup-shadow">
-          <img alt="Precedential Logo Mockup 4" src="/lovable-uploads/419b0dd4-b540-4ab5-8587-7c2134ae5cfa.png" className="w-full h-auto rounded-md bg-precedential-white p-6 object-cover" />
+        <div 
+          className="mt-16 reveal-on-scroll cursor-pointer"
+          onClick={() => openModal("/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png")}
+        >
+          <img alt="Precedential Logo Mockup 4" src="/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png" className="w-full h-auto rounded-md bg-precedential-white p-6 object-cover" />
         </div>
       </div>
+      
+      <ImageModal 
+        isOpen={modalOpen}
+        imageUrl={selectedImage}
+        onClose={closeModal}
+      />
     </section>;
 }
