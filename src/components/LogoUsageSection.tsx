@@ -23,7 +23,7 @@ export default function LogoUsageSection() {
         </div>
         
         <div className="mb-10 p-8 flex items-center justify-center reveal-on-scroll mockup-shadow rounded-none px-0 py-0 bg-white">
-          <img src="/lovable-uploads/c50bf003-bf6a-4e4d-93cb-112f7b3c4657.png" alt="Precedential Icon Only" className="max-w-full max-h-32" />
+          <img alt="Precedential Icon Only" className="max-w-full max-h-32" src="/lovable-uploads/3a329c22-0eee-4938-a8d5-352e53183498.png" />
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 reveal-on-scroll">
