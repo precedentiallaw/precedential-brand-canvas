@@ -1,16 +1,9 @@
-
 import React from 'react';
-
 export default function HeroSection() {
-  return (
-    <section id="hero" className="min-h-screen flex flex-col items-center justify-center bg-precedential-black text-precedential-white py-16 px-4">
+  return <section id="hero" className="min-h-screen flex flex-col items-center justify-center bg-precedential-black text-precedential-white py-16 px-4">
       <div className="container mx-auto text-center max-w-4xl">
         <div className="mb-8">
-          <img 
-            src="/lovable-uploads/e44c0ea9-f5e0-4e9d-b977-a54e93e9cb71.png" 
-            alt="Precedential Logo" 
-            className="mx-auto w-40 md:w-56 animate-fade-in"
-          />
+          <img alt="Precedential Logo" className="mx-auto w-40 md:w-56 animate-fade-in" src="/lovable-uploads/ca4c9373-7b68-4c2e-9bcc-caafa30039b8.png" />
         </div>
         
         <h1 className="text-4xl md:text-6xl font-bold mb-6 text-precedential-gold animate-fade-in-delay-1">
@@ -31,6 +24,5 @@ export default function HeroSection() {
           </button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
