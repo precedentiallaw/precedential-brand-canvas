@@ -16,23 +16,23 @@ export default function LogoVariationsSection() {
   };
 
   const variations = [{
-    name: "Horizontal Logo Gold/White",
-    image: "/lovable-uploads/5f9cd191-09d5-42d4-aef7-336d4ff2a778.png",
+    name: "Vertical Logo",
+    image: "/lovable-uploads/dc34e786-dd7c-4da4-a628-f97cdfb3f249.png",
     bgColor: "bg-precedential-black"
   }, {
-    name: "Horizontal Logo Navy",
-    image: "/lovable-uploads/294465a8-963e-4d57-b49c-7a8f429a0815.png",
+    name: "Horizontal Logo",
+    image: "/lovable-uploads/9daf0562-7e06-4e30-9383-e1d41f3cbca5.png",
     bgColor: "bg-precedential-black"
   }, {
     name: "Icon Only Gold",
     image: "/lovable-uploads/a0450bb4-be17-4941-bb83-0da265d0c596.png",
     bgColor: "bg-precedential-black"
   }, {
-    name: "Icon Silver",
+    name: "Icon Monochrome",
     image: "/lovable-uploads/c7d3a74a-bba6-4d12-9b4b-1df29fa8693e.png",
     bgColor: "bg-white"
   }, {
-    name: "Icon White",
+    name: "Icon Greyscale",
     image: "/lovable-uploads/16bd7d8c-dcc2-4ba5-a5c0-ebb8c79bb763.png",
     bgColor: "bg-precedential-black"
   }];

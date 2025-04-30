@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 export default function BrandVoiceSection() {
@@ -25,7 +24,7 @@ export default function BrandVoiceSection() {
       text: "Request Precedential Protection."
     },
     {
-      text: "When You Need More Than a Lawyer…"
+      text: "Feel the weight of justice shift in your favor"
     }
   ];
 

@@ -17,6 +17,11 @@ export default function DownloadsSection() {
     setModalOpen(false);
   };
 
+  const handleDownloadClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://www.precedentiallaw.com', '_blank');
+  };
+
   const downloads = [{
     title: "Logo Pack",
     icon: "📁",
@@ -48,7 +53,11 @@ export default function DownloadsSection() {
               <div className="text-4xl mb-4">{download.icon}</div>
               <h3 className="text-lg font-bold text-precedential-gold mb-2">{download.title}</h3>
               <p className="text-sm text-precedential-white/70 mb-6">{download.description}</p>
-              <Button variant="outline" className="w-full mt-auto flex items-center gap-2 bg-transparent border-precedential-gold text-precedential-gold hover:bg-precedential-gold/10">
+              <Button 
+                variant="outline" 
+                className="w-full mt-auto flex items-center gap-2 bg-transparent border-precedential-gold text-precedential-gold hover:bg-precedential-gold/10"
+                onClick={handleDownloadClick}
+              >
                 <ArrowDown className="h-4 w-4" /> Download
               </Button>
             </div>)}
@@ -57,7 +66,10 @@ export default function DownloadsSection() {
         <div className="bg-precedential-gold/10 border border-precedential-gold/30 p-8 rounded-lg text-center max-w-3xl mx-auto reveal-on-scroll">
           <h2 className="text-2xl md:text-3xl font-bold mb-3 text-precedential-gold">Need to Use Our Brand?</h2>
           <p className="mb-6 text-precedential-white/90">Let's make sure your usage reflects the Precedential Standard.</p>
-          <Button className="bg-precedential-gold text-precedential-black hover:bg-precedential-gold/90">
+          <Button 
+            className="bg-precedential-gold text-precedential-black hover:bg-precedential-gold/90"
+            onClick={handleDownloadClick}
+          >
             Request Brand Use Approval
           </Button>
         </div>

@@ -1,7 +1,14 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from 'lucide-react';
+
 export default function LogoUsageSection() {
+  const handleDownloadClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.open('https://www.precedentiallaw.com', '_blank');
+  };
+  
   return <section id="logo-usage" className="py-20 px-4 bg-precedential-white text-precedential-black">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 reveal-on-scroll">Our Emblem of Protection</h2>
@@ -15,7 +22,7 @@ export default function LogoUsageSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white rounded-none py-0 px-0">
-            <img alt="Precedential Horizontal Logo" src="/lovable-uploads/58435b5c-1e64-4c1b-b91b-246ec50500b2.png" className="max-w-full max-h-40 object-contain" />
+            <img alt="Precedential Horizontal Logo" src="/lovable-uploads/9daf0562-7e06-4e30-9383-e1d41f3cbca5.png" className="max-w-full max-h-40 object-contain" />
           </div>
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white py-0 px-0 rounded-none">
             <img alt="Precedential Vertical Logo" src="/lovable-uploads/dc34e786-dd7c-4da4-a628-f97cdfb3f249.png" className="max-w-full max-h-40 object-contain" />
@@ -27,13 +34,25 @@ export default function LogoUsageSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 reveal-on-scroll">
-          <Button variant="outline" className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10">
+          <Button 
+            variant="outline" 
+            className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10"
+            onClick={handleDownloadClick}
+          >
             <ArrowDown className="h-4 w-4" /> Download Full Logo – PNG
           </Button>
-          <Button variant="outline" className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10">
+          <Button 
+            variant="outline" 
+            className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10"
+            onClick={handleDownloadClick}
+          >
             <ArrowDown className="h-4 w-4" /> Download Icon Only – SVG
           </Button>
-          <Button variant="outline" className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10">
+          <Button 
+            variant="outline" 
+            className="flex items-center gap-2 bg-precedential-white border-precedential-gold text-precedential-black hover:bg-precedential-gold/10"
+            onClick={handleDownloadClick}
+          >
             <ArrowDown className="h-4 w-4" /> Download Black & White Version – PNG
           </Button>
         </div>
