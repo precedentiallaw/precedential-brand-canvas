@@ -18,7 +18,7 @@ export default function LogoUsageSection() {
             <img src="/lovable-uploads/9954224c-5a1a-40d0-abaf-b9fa4b664494.png" alt="Precedential Horizontal Logo" className="max-w-full max-h-40 object-fill" />
           </div>
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white py-0 px-0 rounded-none">
-            <img src="/lovable-uploads/e44c0ea9-f5e0-4e9d-b977-a54e93e9cb71.png" alt="Precedential Vertical Logo" className="max-w-full max-h-40" />
+            <img src="/lovable-uploads/e44c0ea9-f5e0-4e9d-b977-a54e93e9cb71.png" alt="Precedential Vertical Logo" className="max-w-full max-h-40 object-cover" />
           </div>
         </div>
         
