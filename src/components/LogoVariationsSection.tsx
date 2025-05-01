@@ -1,20 +1,15 @@
-
 import React from 'react';
 import ImageModal from './ImageModal';
-
 export default function LogoVariationsSection() {
   const [modalOpen, setModalOpen] = React.useState(false);
   const [selectedImage, setSelectedImage] = React.useState('');
-  
   const openModal = (image: string) => {
     setSelectedImage(image);
     setModalOpen(true);
   };
-
   const closeModal = () => {
     setModalOpen(false);
   };
-
   const variations = [{
     name: "Vertical Logo",
     image: "/lovable-uploads/dc34e786-dd7c-4da4-a628-f97cdfb3f249.png",
@@ -36,7 +31,6 @@ export default function LogoVariationsSection() {
     image: "/lovable-uploads/16bd7d8c-dcc2-4ba5-a5c0-ebb8c79bb763.png",
     bgColor: "bg-precedential-black"
   }];
-  
   const exclusions = [{
     rule: "Don't stretch",
     example: "Distorting proportions compromises brand integrity"
@@ -56,7 +50,6 @@ export default function LogoVariationsSection() {
     rule: "Don't add shadows or effects",
     example: "Keep the logo clean and authentic"
   }];
-  
   return <section id="variations" className="py-20 px-4 bg-precedential-black text-precedential-white">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-precedential-gold reveal-on-scroll">Using It Right</h2>
@@ -64,14 +57,9 @@ export default function LogoVariationsSection() {
         <div className="w-20 h-1 bg-precedential-gold mb-10 reveal-on-scroll"></div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-16">
-          {variations.map((variant, index) => <div 
-            key={index} 
-            className={`${variant.bgColor} p-6 rounded-md flex flex-col items-center justify-center reveal-on-scroll cursor-pointer`} 
-            style={{
-              animationDelay: `${index * 0.1}s`
-            }}
-            onClick={() => openModal(variant.image)}
-          >
+          {variations.map((variant, index) => <div key={index} style={{
+          animationDelay: `${index * 0.1}s`
+        }} onClick={() => openModal(variant.image)} className="">
               <div className="h-36 flex items-center justify-center">
                 <img src={variant.image} alt={`Precedential ${variant.name}`} className="max-h-full max-w-full" />
               </div>
@@ -90,18 +78,11 @@ export default function LogoVariationsSection() {
             </div>)}
         </div>
         
-        <div 
-          className="mt-16 reveal-on-scroll cursor-pointer"
-          onClick={() => openModal("/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png")}
-        >
+        <div className="mt-16 reveal-on-scroll cursor-pointer" onClick={() => openModal("/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png")}>
           <img alt="Precedential Logo Mockup 4" src="/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png" className="w-full h-auto rounded-md bg-precedential-white p-6 object-cover" />
         </div>
       </div>
       
-      <ImageModal 
-        isOpen={modalOpen}
-        imageUrl={selectedImage}
-        onClose={closeModal}
-      />
+      <ImageModal isOpen={modalOpen} imageUrl={selectedImage} onClose={closeModal} />
     </section>;
 }
