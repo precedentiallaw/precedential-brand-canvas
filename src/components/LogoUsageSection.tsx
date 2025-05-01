@@ -19,15 +19,15 @@ export default function LogoUsageSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white rounded-none py-0 px-0">
-            <img alt="Precedential Horizontal Logo" src="/lovable-uploads/c92c90d5-1fd6-4786-84d0-ecda425b31c3.png" className="max-w-full max-h-40 object-fill" />
+            <img alt="Precedential Horizontal Logo" src="/lovable-uploads/c92c90d5-1fd6-4786-84d0-ecda425b31c3.png" className="max-w-full max-h-40 object-scale-down" />
           </div>
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white py-0 px-0 rounded-none">
-            <img alt="Precedential Vertical Logo" src="/lovable-uploads/0112dbb7-2086-44c4-a88c-3f74cc934a19.png" className="max-w-full max-h-40 object-fill" />
+            <img alt="Precedential Vertical Logo" src="/lovable-uploads/0112dbb7-2086-44c4-a88c-3f74cc934a19.png" className="max-w-full max-h-40 object-scale-down" />
           </div>
         </div>
         
         <div className="mb-10 p-8 flex items-center justify-center reveal-on-scroll mockup-shadow rounded-none px-0 py-0 bg-white">
-          <img alt="Precedential Icon Only" className="max-w-full max-h-32 object-contain" src="/lovable-uploads/f35ddf50-f370-48f0-bafd-9926ec5fd112.png" />
+          <img alt="Precedential Icon Only" src="/lovable-uploads/f35ddf50-f370-48f0-bafd-9926ec5fd112.png" className="max-w-full max-h-32 object-scale-down" />
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16 reveal-on-scroll">
