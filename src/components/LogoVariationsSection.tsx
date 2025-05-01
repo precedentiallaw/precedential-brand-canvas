@@ -79,7 +79,7 @@ export default function LogoVariationsSection() {
         </div>
         
         <div className="mt-16 reveal-on-scroll cursor-pointer" onClick={() => openModal("/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png")}>
-          <img alt="Precedential Logo Mockup 4" src="/lovable-uploads/716188a4-8240-40a3-a15f-565e8b6e2f83.png" className="w-full h-auto rounded-md bg-precedential-white p-6 object-cover" />
+          <img alt="Precedential Logo Mockup 4" src="/lovable-uploads/72466071-f4e4-4b7f-8b21-f3818c5e834b.png" className="w-full h-auto rounded-md bg-precedential-white p-6 object-scale-down" />
         </div>
       </div>
       
