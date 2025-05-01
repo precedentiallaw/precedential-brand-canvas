@@ -43,7 +43,7 @@ export default function LogoUsageSection() {
         </div>
         
         <div className="mt-16 reveal-on-scroll mockup-shadow">
-          <img alt="Precedential Logo Mockup" className="w-full h-auto rounded-md" src="/lovable-uploads/1f4622cf-0284-4c34-a5ff-c6c838f68a0e.png" />
+          <img alt="Precedential Logo Mockup" className="w-full h-auto rounded-md" src="/lovable-uploads/09fd860d-e83c-4e10-876f-57b6a322dcb9.png" />
         </div>
       </div>
     </section>;
