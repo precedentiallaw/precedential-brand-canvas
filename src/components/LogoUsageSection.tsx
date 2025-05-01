@@ -19,7 +19,7 @@ export default function LogoUsageSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-16">
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white rounded-none py-0 px-0">
-            <img alt="Precedential Horizontal Logo" className="max-w-full max-h-40 object-contain" src="/lovable-uploads/c92c90d5-1fd6-4786-84d0-ecda425b31c3.png" />
+            <img alt="Precedential Horizontal Logo" src="/lovable-uploads/c92c90d5-1fd6-4786-84d0-ecda425b31c3.png" className="max-w-full max-h-40 object-fill" />
           </div>
           <div className="p-8 flex items-center justify-center reveal-on-scroll mockup-shadow bg-white py-0 px-0 rounded-none">
             <img alt="Precedential Vertical Logo" className="max-w-full max-h-40 object-contain" src="/lovable-uploads/0112dbb7-2086-44c4-a88c-3f74cc934a19.png" />
